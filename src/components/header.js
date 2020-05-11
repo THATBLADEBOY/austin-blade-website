@@ -1,4 +1,5 @@
 import { Link } from "gatsby";
+import { ThemeToggler } from "gatsby-plugin-dark-mode";
 import PropTypes from "prop-types";
 import React from "react";
 
@@ -16,6 +17,7 @@ const Header = ({ siteTitle }) => (
         maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
         display: `flex`,
+        justifyContent: `space-between`,
       }}
     >
       <Link
@@ -27,6 +29,17 @@ const Header = ({ siteTitle }) => (
       >
         <AustinBladeLogo width="60px" />
       </Link>
+      <ThemeToggler>
+        {({ theme, toggleTheme }) => (
+          <label>
+            <input
+              type="checkbox"
+              onChange={e => toggleTheme(e.target.checked ? "dark" : "light")}
+              checked={theme === "dark"}
+            />{" "}
+          </label>
+        )}
+      </ThemeToggler>
     </div>
   </header>
 )
