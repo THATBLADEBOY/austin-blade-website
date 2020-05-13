@@ -1,8 +1,9 @@
-import { graphql, Link } from "gatsby";
-import React from "react";
+import { graphql, Link } from "gatsby"
+import React from "react"
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Layout from "../components/layout"
+import PostPreviewCard from "../components/postPreviewCard"
+import SEO from "../components/seo"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -11,9 +12,15 @@ const IndexPage = ({ data }) => (
       const { frontmatter } = edge.node
       return (
         <div key={frontmatter.path}>
-          <Link to={frontmatter.path}>
+          <PostPreviewCard
+            title={frontmatter.title}
+            path={frontmatter.path}
+            date={frontmatter.date}
+          />
+
+          {/* <Link to={frontmatter.path}>
             {frontmatter.title + frontmatter.date}
-          </Link>
+          </Link> */}
         </div>
       )
     })}
