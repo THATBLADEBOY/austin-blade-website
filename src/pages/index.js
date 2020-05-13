@@ -1,9 +1,9 @@
-import { graphql, Link } from "gatsby"
-import React from "react"
+import { graphql } from "gatsby";
+import React from "react";
 
-import Layout from "../components/layout"
-import PostPreviewCard from "../components/postPreviewCard"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import PostPreviewCard from "../components/postPreviewCard";
+import SEO from "../components/seo";
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -16,15 +16,14 @@ const IndexPage = ({ data }) => (
             title={frontmatter.title}
             path={frontmatter.path}
             date={frontmatter.date}
+            excerpt={frontmatter.excerpt}
+            featuredImg={frontmatter.featuredImage}
+            tags={frontmatter.tags}
           />
-
-          {/* <Link to={frontmatter.path}>
-            {frontmatter.title + frontmatter.date}
-          </Link> */}
         </div>
       )
     })}
-    <Link to="/tags">Browse by Tag</Link>
+    {/*<Link to="/tags">Browse by Tag</Link>*/}
   </Layout>
 )
 
@@ -37,6 +36,9 @@ export const query = graphql`
             title
             path
             date
+            excerpt
+            featuredImage
+            tags
           }
         }
       }

@@ -5,6 +5,8 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 import "./layout.css";
+import "typeface-roboto";
+import "typeface-roboto-mono";
 
 import { graphql, useStaticQuery } from "gatsby";
 import PropTypes from "prop-types";
@@ -35,11 +37,11 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
+        {/* <footer>
           © {new Date().getFullYear()}, Built with ❤ by
           {` `}
           <a href="https://www.twitter.com/_austinblade">Austin Blade</a>
-        </footer>
+        </footer>*/}
       </div>
     </>
   )
