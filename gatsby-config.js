@@ -32,6 +32,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
+        path: `src/images/WelcomeToRelode.png`,
         // icon: `src/images/austinbladelogo.js`, // This path is relative to the root of the site.
       },
     },
