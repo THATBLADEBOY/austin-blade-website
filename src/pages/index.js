@@ -1,4 +1,5 @@
 import { graphql } from "gatsby";
+import Img from "gatsby-image";
 import React from "react";
 
 import Layout from "../components/layout";
@@ -17,9 +18,14 @@ const IndexPage = ({ data }) => (
             path={frontmatter.path}
             date={frontmatter.date}
             excerpt={frontmatter.excerpt}
-            featuredImg={frontmatter.featuredImage}
             tags={frontmatter.tags}
-          />
+          >
+            <Img
+              style={{ borderRadius: `10px 10px 0px 0px`, margin: `5` }}
+              fluid={frontmatter.featuredImage.childImageSharp.fluid}
+              alt=""
+            />
+          </PostPreviewCard>
         </div>
       )
     })}
@@ -37,8 +43,14 @@ export const query = graphql`
             path
             date
             excerpt
-            featuredImage
             tags
+            featuredImage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

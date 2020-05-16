@@ -37,11 +37,15 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        {/* <footer>
+        <footer
+          style={{
+            textAlign: `center`,
+          }}
+        >
           © {new Date().getFullYear()}, Built with ❤ by
           {` `}
           <a href="https://www.twitter.com/_austinblade">Austin Blade</a>
-        </footer>*/}
+        </footer>
       </div>
     </>
   )
