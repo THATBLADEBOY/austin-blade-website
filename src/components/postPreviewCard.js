@@ -1,8 +1,8 @@
-import "../components/layout.css";
+import "../components/layout.css"
 
-import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import React from "react";
+import { Link } from "gatsby"
+import PropTypes from "prop-types"
+import React from "react"
 
 const PostPreviewCard = ({
   title,
@@ -11,6 +11,7 @@ const PostPreviewCard = ({
   excerpt,
   featuredImage,
   tags,
+  children,
 }) => (
   <header
     style={{
@@ -25,9 +26,9 @@ const PostPreviewCard = ({
         }}
         to={path}
       >
-        {title}
+        {children}
       </Link>
-      {featuredImage}
+      {console.log(featuredImage)}
       <div
         style={{
           color: `#9b9b9b`,
@@ -73,7 +74,7 @@ PostPreviewCard.propTypes = {
   path: PropTypes.string,
   date: PropTypes.string,
   excerpt: PropTypes.string,
-  featuredImage: PropTypes.string,
+  featuredImage: PropTypes.any,
   tags: PropTypes.arrayOf(PropTypes.string),
 }
 
@@ -82,6 +83,7 @@ PostPreviewCard.defaultProps = {
   path: ``,
   date: ``,
   excerpt: ``,
+  featuredImage: undefined,
 }
 
 export default PostPreviewCard
