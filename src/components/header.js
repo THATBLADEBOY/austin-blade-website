@@ -5,16 +5,18 @@ import React from "react";
 
 import AustinBladeLogo from "../images/austinbladelogo";
 
-let prevScrollpos = window.pageYOffset
+if (typeof window !== undefined) {
+  let prevScrollpos = window.pageYOffset
 
-window.onscroll = function () {
-  let currentScrollPos = window.pageYOffset
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0"
-  } else {
-    document.getElementById("navbar").style.top = "-75px"
+  window.onscroll = function () {
+    let currentScrollPos = window.pageYOffset
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0"
+    } else {
+      document.getElementById("navbar").style.top = "-75px"
+    }
+    prevScrollpos = currentScrollPos
   }
-  prevScrollpos = currentScrollPos
 }
 
 const Header = ({ siteTitle }) => (
