@@ -32,16 +32,12 @@ const Layout = ({ children }) => {
         style={{
           margin: `0 auto`,
           maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
+          padding: `8rem 1.0875rem 1.45rem`,
           backgroundColor: "var(--bg)",
         }}
       >
         <main>{children}</main>
-        <footer
-          style={{
-            textAlign: `center`,
-          }}
-        >
+        <footer className="footer">
           © {new Date().getFullYear()}, Built with ❤ by
           {` `}
           <a href="https://www.twitter.com/_austinblade">Austin Blade</a>
