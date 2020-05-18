@@ -19,7 +19,7 @@ const PostPreviewCard = ({ title, path, date, excerpt, tags, children }) => (
           style={{
             color: `#9b9b9b`,
             marginTop: `33px`,
-            marginBottom: `33px`,
+            marginBottom: `15px`,
             lineHeight: `1.75`,
           }}
         >
@@ -27,28 +27,25 @@ const PostPreviewCard = ({ title, path, date, excerpt, tags, children }) => (
         </div>
         <div
           className="previewCardText"
-          style={{ display: `flex`, justifyContent: `space-between` }}
+          style={{
+            display: `flex`,
+            flexWrap: `wrap`,
+            justifyContent: `space-between`,
+          }}
         >
-          <div style={{ display: `flex` }}>
+          <div className="postTagContainer">
             {tags.map(tag => {
-              return (
-                <div
-                  style={{
-                    fontWeight: `300`,
-                    marginRight: `5px`,
-                  }}
-                >
-                  #{tag}
-                </div>
-              )
+              return <div className="postTag">#{tag}</div>
             })}
           </div>
           <div
             style={{
+              marginTop: `20px`,
               marginBottom: `10px`,
-              alignSelf: `flex-end`,
-              color: `#d50000`,
+              color: `#474747`,
               fontWeight: `300`,
+              flexGrow: `1`,
+              textAlign: `right`,
             }}
           >
             {date}

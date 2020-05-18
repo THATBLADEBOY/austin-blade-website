@@ -41,12 +41,12 @@ export const query = graphql`
           frontmatter {
             title
             path
-            date
+            date(formatString: "MMMM DD, YYYY")
             excerpt
             tags
             featuredImage {
               childImageSharp {
-                fluid {
+                fluid(quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }

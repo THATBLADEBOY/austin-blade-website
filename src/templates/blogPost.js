@@ -10,8 +10,8 @@ const Template = ({ data, pageContext }) => {
   const html = markdownRemark.html
   return (
     <Layout>
-      <h1>{title}</h1>
-      <div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
+      <h1 className="postHeader">{title}</h1>
+      <div className="postBody" dangerouslySetInnerHTML={{ __html: html }} />
       {next && <Link to={next.frontmatter.path}>next</Link>}
       {prev && <Link to={prev.frontmatter.path}>prev</Link>}
     </Layout>

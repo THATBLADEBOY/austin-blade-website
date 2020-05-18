@@ -5,39 +5,51 @@ import React from "react";
 
 import AustinBladeLogo from "../images/austinbladelogo";
 
+let prevScrollpos = window.pageYOffset
+
+window.onscroll = function () {
+  let currentScrollPos = window.pageYOffset
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0"
+  } else {
+    document.getElementById("navbar").style.top = "-75px"
+  }
+  prevScrollpos = currentScrollPos
+}
+
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      marginBottom: `1.45rem`,
-    }}
-  >
+  <header>
     <div
+      id="navbar"
       style={{
         margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        width: `100%`,
+        padding: `1.0rem 1.0875rem`,
         display: `flex`,
         justifyContent: `space-between`,
+        backgroundColor: `var(--bg)`,
+        boxShadow: `var(--cardShadow)`,
+        position: `fixed`,
+        top: 0,
+        height: 75,
+        transition: `top 0.3s`,
       }}
     >
-      <Link
-        to="/"
-        style={{
-          color: `black`,
-          textDecoration: `none`,
-        }}
-      >
+      <Link to="/">
         <AustinBladeLogo width="60px" />
       </Link>
+
       <ThemeToggler>
         {({ theme, toggleTheme }) => (
-          <label>
-            <input
-              type="checkbox"
-              onChange={e => toggleTheme(e.target.checked ? "dark" : "light")}
-              checked={theme === "dark"}
-            />{" "}
-          </label>
+          <div className="container">
+            <label>
+              <input
+                type="checkbox"
+                onChange={e => toggleTheme(e.target.checked ? "dark" : "light")}
+                checked={theme === "dark"}
+              />{" "}
+            </label>
+          </div>
         )}
       </ThemeToggler>
     </div>
