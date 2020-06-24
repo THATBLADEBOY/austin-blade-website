@@ -1,24 +1,23 @@
 import { Link } from "gatsby";
-import { ThemeToggler } from "gatsby-plugin-dark-mode";
 import PropTypes from "prop-types";
 import React from "react";
 
 import AustinBladeLogo from "../images/austinbladelogo";
 
 const Header = ({ siteTitle }) => {
-  React.useEffect(() => {
-    let prevScrollpos = window.pageYOffset
+  //   React.useEffect(() => {
+  //     let prevScrollpos = window.pageYOffset
 
-    window.onscroll = function () {
-      let currentScrollPos = window.pageYOffset
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0"
-      } else {
-        document.getElementById("navbar").style.top = "-75px"
-      }
-      prevScrollpos = currentScrollPos
-    }
-  }, [])
+  //     window.onscroll = function () {
+  //       let currentScrollPos = window.pageYOffset
+  //       if (prevScrollpos > currentScrollPos) {
+  //         document.getElementById("navbar").style.top = "0"
+  //       } else {
+  //         document.getElementById("navbar").style.top = "-75px"
+  //       }
+  //       prevScrollpos = currentScrollPos
+  //     }
+  //   }, [])
 
   return (
     <header>
@@ -42,7 +41,7 @@ const Header = ({ siteTitle }) => {
           <AustinBladeLogo width="60px" />
         </Link>
 
-        <ThemeToggler>
+        {/* <ThemeToggler>
           {({ theme, toggleTheme }) => (
             <div className="container">
               <label>
@@ -56,7 +55,7 @@ const Header = ({ siteTitle }) => {
               </label>
             </div>
           )}
-        </ThemeToggler>
+                </ThemeToggler> */}
       </div>
     </header>
   )
