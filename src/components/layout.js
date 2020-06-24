@@ -36,11 +36,21 @@ const Layout = ({ children }) => {
           backgroundColor: "var(--bg)",
         }}
       >
-        <main>{children}</main>
+        <h2 style={{ color: `white` }}>
+          Thanks for checking out the site. It's under construction. 🚧 If you
+          need to contact me,{" "}
+          <a name="mailTo" href="mailto:hello@austinblade.com">
+            shoot me an email
+          </a>
+          .
+        </h2>
+        {/* <main>{children}</main> */}
         <footer className="footer">
           © {new Date().getFullYear()}, Built with ❤ by
           {` `}
-          <a href="https://www.twitter.com/_austinblade">Austin Blade</a>
+          <a name="twitter" href="https://www.twitter.com/_austinblade">
+            Austin Blade
+          </a>
         </footer>
       </div>
     </>

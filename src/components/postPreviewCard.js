@@ -12,12 +12,14 @@ const PostPreviewCard = ({ title, path, date, excerpt, tags, children }) => (
       }}
     >
       <div className="previewCard">
-        <Link to={path}>{children}</Link>
+        <Link name="previewCardContent" to={path}>
+          {children}
+        </Link>
 
         <div
           className="previewCardText"
           style={{
-            color: `#9b9b9b`,
+            color: `white`,
             marginTop: `33px`,
             marginBottom: `15px`,
             lineHeight: `1.75`,
@@ -42,7 +44,7 @@ const PostPreviewCard = ({ title, path, date, excerpt, tags, children }) => (
             style={{
               marginTop: `20px`,
               marginBottom: `10px`,
-              color: `#474747`,
+              color: `white`,
               fontWeight: `300`,
               flexGrow: `1`,
               textAlign: `right`,

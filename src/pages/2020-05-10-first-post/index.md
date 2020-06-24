@@ -1,10 +1,10 @@
 ---
 path: "/first-post"
-date: "2018-07-21"
+date: "2020-07-01"
 title: "My First Post"
 tags: ["experience", "developer", "junior"]
 excerpt: "Shaman paleo tote bag tbh letterpress, poutine messenger bag. Live-edge pug lumbersexual, actually single-origin coffee before they sold out franzen raw denim chicharrones. Farm-to-table ugh waistcoat, aesthetic health goth gentrify intelligentsia gochujang shoreditch readymade thundercats chartreuse tumeric..."
-featuredImage: "../../images/firstYearAsDeveloper.png"
+featuredImage: "../../images/firstYearPostImage.jpg"
 ---
 
 Shaman paleo tote bag tbh letterpress, poutine messenger bag. Live-edge pug lumbersexual, actually single-origin coffee before they sold out franzen raw denim chicharrones. Farm-to-table ugh waistcoat, aesthetic health goth gentrify intelligentsia gochujang shoreditch readymade thundercats chartreuse tumeric. Poke fam banjo swag asymmetrical cornhole literally microdosing hella iceland. Wolf crucifix fingerstache knausgaard single-origin coffee. PBR&B mixtape YOLO XOXO wolf green juice. Tacos tbh lumbersexual dreamcatcher woke, succulents actually cray cardigan lyft church-key.
